@@ -1,0 +1,39 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-153-3-j2gm4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-wwt7d[0m
+{"level":"warn","ts":1579699689.914329,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1579699689.9150095,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-153-3-j2gm4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-pmdcg[0m
+{"level":"warn","ts":1579699690.4264936,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1579699690.4272373,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-environment-pr-153-3-j2gm4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-153-3-j2gm4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-pr-153-3-xwqw2[0m
+{"level":"warn","ts":1579699695.6227422,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1579699695.8278675,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-153-3-boot-eks-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-153-3-j2gm4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:aeda231980149959308db9fe4d969905c431034d,3:8d5e716dca5fac6f3240eaf0f5e5cae17a5a96c5
+DEBUG: ran git fetch --unshallow origin 8d5e716dca5fac6f3240eaf0f5e5cae17a5a96c5: aeda231980149959308db9fe4d969905c431034d: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard aeda231980149959308db9fe4d969905c431034d in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 8d5e716dca5fac6f3240eaf0f5e5cae17a5a96c5 in 
+Merged SHA 8d5e716dca5fac6f3240eaf0f5e5cae17a5a96c5 with commit message 'chore: Promote bdd-gh-1579698058 to version 0.0.1' into base branch master
+
+Showing logs for build [32mcb-kubecd-environment-pr-153-3-j2gm4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
